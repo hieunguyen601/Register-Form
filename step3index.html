@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./step3.css">
+    <link rel="icon" href="resources/favicon.ico" type="image/x-icon" sizes="96x96">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet">
+    <title>Multi-step Register Form</title>
+  </head>
+  <body>
+    <img id="blur" src="./resources/blur-radial.png" alt="">
+    <div class="summary-section">
+      <p class="title">Summary</p>
+      <div class="summary-info">
+        <p><span class="label">Name: </span><span class="value" id="summaryName"></span></p>
+        <p><span class="label">Email: </span><span class="value" id="summaryEmail"></span></p>
+      </div>
+      <div class="summary-topics">
+        <p class="label">Topics:</p>
+        <ul id="topicsList"></ul>
+      </div>
+      <button type="button" class="continueButton">Continue</button>
+    </div>
+    <p id="step">Step <span>3</span> of 3
+      <span class="step-dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot active"></span>
+      </span>
+    </p>
+    <script src="./script.js"></script>
+  </body>
+</html>

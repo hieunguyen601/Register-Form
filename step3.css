@@ -1,0 +1,166 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Inter, sans-serif;
+    color: white;
+    background-color: #13152A;
+    overflow: hidden;
+}
+
+#blur {
+    position: fixed;
+    max-width: 300px;
+    top: calc(50% - 220px);
+    left: calc(50% - 300px);
+    pointer-events: none;
+    opacity: 0.85;
+}
+
+.summary-section {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: #1E2030;
+    max-width: 480px;
+    width: calc(100% - 32px);
+    padding: 40px 48px 36px;
+    border-radius: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.summary-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.05) 60%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 28px;
+    color: #fff;
+}
+
+.summary-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.summary-info p {
+    font-size: 14px;
+}
+
+.label {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 14px;
+}
+
+.value {
+    color: #fff;
+    font-weight: 600;
+}
+
+.summary-topics {
+    margin-bottom: 8px;
+}
+
+.summary-topics .label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.summary-topics ul {
+    list-style: disc;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.summary-topics ul li {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.continueButton {
+    align-self: center;
+    margin-top: 28px;
+    padding: 12px 48px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    background-color: #7B4FD6;
+    color: #fff;
+    font-size: 14px;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+.continueButton:hover {
+    background-color: #A855F7;
+}
+
+.continueButton:active {
+    opacity: 0.7;
+}
+
+#step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.55);
+    margin-top: 20px;
+    z-index: 1;
+}
+
+.step-dots {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.dot.active {
+    background-color: #7B4FD6;
+    width: 20px;
+    border-radius: 4px;
+}
+
+@media (max-width: 540px) {
+    .summary-section {
+        padding: 32px 24px 28px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+}

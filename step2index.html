@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./step2.css">
+    <link rel="icon" href="resources/favicon.ico" type="image/x-icon" sizes="96x96">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet">
+    <title>Multi-step Register Form</title>
+  </head>
+  <body>
+    <img id="blur" src="./resources/blur-radial.png" alt="">
+    <div class="second-section">
+      <p class="title">Which topics you are interested in?</p>
+      <button class="topic-btn" id="button1" data-topic="Software Development">Software Development</button>
+      <button class="topic-btn" id="button2" data-topic="User Experience">User Experience</button>
+      <button class="topic-btn" id="button3" data-topic="Graphic Design">Graphic Design</button>
+      <button class="continueButton">Continue</button>
+    </div>
+    <p id="step">Step <span id="pageNumber">2</span> of 3
+      <span class="step-dots">
+        <span class="dot"></span>
+        <span class="dot active"></span>
+        <span class="dot"></span>
+      </span>
+    </p>
+    <script src="./script.js"></script>
+  </body>
+</html>
